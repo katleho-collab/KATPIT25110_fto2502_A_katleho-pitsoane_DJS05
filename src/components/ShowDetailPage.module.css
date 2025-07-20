@@ -1,0 +1,265 @@
+.detailPage {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+  
+  .backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .backButton:hover {
+    color: #357abd;
+  }
+  
+  .showHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .showImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .showInfo {
+    flex: 1;
+  }
+  
+  .showTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .showDescription {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .metaInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+  }
+  
+  .metaItem {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .metaLabel {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+  
+  .metaValue {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .genreTagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .genreTag {
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  .seasonNavigation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .currentSeasonHeading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .seasonSelect {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none; /* Remove default arrow */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2C197.393L146.2%2C56.593L5.4%2C197.393h281.6z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+  }
+  
+  .seasonSelect:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+  }
+  
+  .episodeListSection {
+    margin-top: 1.5rem;
+  }
+  
+  .seasonTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .episodeCount {
+    font-size: 1.2rem;
+    color: #777;
+    font-weight: 400;
+  }
+  
+  .episodesGrid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .episodeCard {
+    display: flex;
+    gap: 1rem;
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 1rem;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .episodeImage {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .episodeInfo {
+    flex: 1;
+  }
+  
+  .episodeNumber {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a90e2;
+    margin-bottom: 0.25rem;
+  }
+  
+  .episodeTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .episodeDescription {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .showHeader {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .showImage {
+      max-width: 250px;
+      margin-right: 2rem;
+    }
+  
+    .detailPage {
+      padding: 3rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .detailPage {
+      padding: 1.5rem;
+      margin: 1rem auto;
+    }
+  
+    .showTitle {
+      font-size: 2rem;
+    }
+  
+    .showImage {
+      margin: 0 auto 1.5rem auto;
+    }
+  
+    .metaInfo {
+      grid-template-columns: 1fr;
+    }
+  
+    .seasonNavigation {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+  
+    .currentSeasonHeading {
+      font-size: 1.3rem;
+    }
+  
+    .seasonSelect {
+      width: 100%;
+    }
+  
+    .episodeCard {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .episodeImage {
+      margin-bottom: 0.8rem;
+    }
+  }
+  
